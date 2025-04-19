@@ -1,11 +1,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-body {
+html,body {
   margin: 0;
   padding: 0;
   background: black;
   color: #fff;
+  box-sizing: border-box;
   font-family: sans-serif;
 }
 
@@ -17,7 +18,8 @@ body {
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
   font-optical-sizing: auto;
   font-weight: lighter;
-  font-size: 35px;
+  font-size: 25px;
+  margin-left: 10%;
   font-style: normal;
   
   
@@ -30,13 +32,8 @@ display: block;
 #hero h1{
   margin-right: 15%;
 }
-#about p{
-  /* color: red; */
-  margin-right: 15%;
-}
-#hero p{
-  margin-right: 20%;
-}
+
+
 .leftside {
 width:300px;
   position: fixed; /* Make the left div fixed */
@@ -65,19 +62,17 @@ width:300px;
 }
 
 .card{
-padding: 0px 20px 15px 20px;
+padding: 0px 0px 10px 15px;
 
 }
 .card img{
 border-radius: 5%;
-width:240px;
-
-height:300px;
+width:20vw;
+height:40vh;
 
 }
 .pcontent{
 text-align: center;
-margin-top: 30%;
 display: block;
 }
 
@@ -98,6 +93,8 @@ margin-bottom: 50px;
 .fullcard{
 border-left: 1px solid #565353;
 border-right: 1px solid #565353;
+border-bottom: 1px solid #565353;
+border-top: 1px solid #565353;
 
 }
 
@@ -150,7 +147,7 @@ border-bottom-left-radius: 30px;
 
 
 .hero h1,.fact h1{
-font-size: 78px;
+font-size: 60px;
 letter-spacing: -0.2px;
 margin-bottom: 0px;
 font-weight: 300;
@@ -197,12 +194,13 @@ height: 175px;
 display: flex;
 align-items: center;
 justify-content: center;
-margin-left: 65%;
+
+right: 60%;
 border-radius: 50%;
 border: 1px solid #575757;
 position: relative;
 overflow: hidden;
-margin-right: 15px;
+
 }
 
 .project_btn img{
@@ -291,7 +289,13 @@ margin-top: 42px;
 text-align: left;
 }
 
-.service .service_card{
+#service {
+    padding: 20px 20px 20px 20px;
+    position: relative;
+    display: block;
+}
+
+.container_service .service_card{
 border: 1px solid #565656;
 border-radius: 20px;
 transition: .3s;
@@ -311,7 +315,7 @@ justify-content: space-between;
   
 }
 
-.service_card:hover , .skills .item:hover{
+.service_card:hover , #skills .item:hover{
 border: 1px solid #28e98c;
 transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
@@ -319,14 +323,19 @@ box-shadow: 0 0 10px #28e98c, 0 0 20px #28e98c inset;
 }
 
 
-.skills .d-flex{
+#skills .d-flex{
 gap:20px;
 text-align: center;
 justify-content: flex-start;
 
 }
+#skills {
+    padding: 20px 20px 20px 20px;
+    position: relative;
+    display: block;
+}
 
-.skills .item{
+#skills .item{
 border: 2px solid #565656;
   border-radius: 85px;
   padding:54px 0 48px 0;;
@@ -334,15 +343,15 @@ border: 2px solid #565656;
   transition: 0.999ms;
 }
 
-.skills .item img{
+#skills .item img{
 margin: 0px 60px 25px 60px;
 }
 
-.skills .outer{
+#skills .outer{
 padding: 42px 0px 42px 0px;
 }
 
-.skills .item h2{
+#skills .item h2{
 font-size: 40PX;
 color: #28e98c;
 margin: 0px;
@@ -537,7 +546,7 @@ cursor: pointer;
 }
 
 /* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
+/* @media only screen and (max-width: 700px){
 .modal-content {
     width: 100%;
 }
@@ -657,7 +666,7 @@ input, .msg_div  textarea{
   }  
 
 
-}
+} */
 
 
 
@@ -746,7 +755,7 @@ color: white;
 .msg_div textarea
 {
   height: 83px;
-  width: 609px;
+  width: 250px;
   border: 1px solid white;
   padding-top: 10px;
 }
@@ -771,6 +780,11 @@ flex-direction: row;
 padding: 0 var(--padding-xs) 0 0;
 box-sizing: border-box;
 }
+/* #skills {
+    padding: 20px 20px 20px 20px;
+    position: relative;
+    display: block;
+} */
 
 .dashboard-frame {
 height: 37px;
@@ -806,7 +820,7 @@ padding: 0 36px 0 var(--padding-xl);
 position: fixed;
 width: 60px;
 z-index: 101;
-margin: 200px 0px 0px 970px;
+margin: 105px 0px 0px 820px;
 flex-direction: column;
 align-items: center;
 padding: 40px 30px 40px 30px;
@@ -816,22 +830,100 @@ border: 2px solid rgb(255, 255, 255);
 
 }
 
-
-
-@media (max-width:900px) {
-.mini-side-bar{
-  display: none;
+@media(max-width:768px){
+    .main{
+        flex-direction: column;
+        margin-left: 6%;
+    }
+    .leftside {
+        position: relative;
+        width: 85%;
+    }
+    .rightside {
+        padding-left: 0px;
+    }
+    .header h4{
+        color: whitesmoke;
+        margin-left: 15%;
+    }
+    .details {
+        height: 685px;
+        
+    }
+    .card img {
+        border-radius: 5%;
+        width: 60vw;
+        height: 46vh;
+    }
+    #hero h1{
+        font-size: 45px;
+        margin-bottom: 10%;
+    }
+    #service {
+        padding: 0px 0px 0px 0px;
+    }
+    .d-flex{
+        flex-direction: column;
+    }
+    .container_service .service_card {
+        padding: 0px 0px 0px 15px;
+    }
+    .service_card {
+        width: 91%;
+    }
+    #skills {
+        padding: 1px 25px 0px 0px;
+    }
 }
-input, textarea{
-  width:200px !important;
-  
-  
-  } 
+.service_card .d-flex {
+    align-items: flex-start;
 }
 
+    #hero p{
+        font-size: 19px;
+        
+        margin-bottom: 50px;
+text-align: justify;
+    }
+   
+ 
+    .text-green H1{
+        margin-left: 33%;
+    }
+    .project_btn{
+        margin-right: 40%;
+    }
+    .hero .project_btn{
+        margin-left: 80%;
+        
+    }
+    #about h2{
+        font-size: 45px;
+    margin-right: 10%;
+    }
+    #about p {
+        font-size: 20px;
+        margin-right: 10%;
+        text-align: justify;
+    }
 
-.item_content{
+    /* .text-green p{
+        margin-left: 5%;
+    } */
+/* .item_content{
   padding-left:30px;
+} */
+.back_div {
+    width: 0px;
+}
+
+.date {
+    gap: 0px;
+}
+
+.d-flex{
+    margin-top: 5%;
+    gap: 40px;
 }
 
 @media (max-width:360px) {
@@ -843,30 +935,12 @@ input, textarea{
     .project_img, .back_div{
       width:280px;
     }
-    .project_btn{
-      margin: 10%;
-    }
+ 
   }
 
 
+.btn a{
+    text-decoration: none;
+}
 
-  @media (max-width:768px){
-      .hero .project_btn{
-          margin: 70px;
-          padding: 0;
-      }
-      .card img{
-      margin-bottom: 30%;
-
-      }       
-
-      .left {
-          display: flex;
-          justify-content: center;
-          align-items: center; /* for vertical centering, if needed */
-        }
-        
-        
-        
-  }
 
